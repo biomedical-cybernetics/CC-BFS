@@ -1,0 +1,95 @@
+# Results and generated data
+results/
+data/generated_networks/
+
+# MATLAB
+*.asv
+*.autosave
+*.m~
+slprj/
+*.slxc
+codegen/
+.SimulinkProject/
+
+# C++ Build artifacts
+*.o
+*.obj
+*.exe
+*.out
+*.app
+*.so
+*.dll
+*.mexw64
+*.dylib
+*.a
+*.lib
+build/
+cmake-build-*/
+CMakeFiles/
+CMakeCache.txt
+*.cmake
+Makefile
+
+# Precompiled MEX and DLL files (exceptions to be tracked)
+!source/matlab/mex_functions/*.mexw64
+!source/python/lib/*.dll
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+env/
+venv/
+ENV/
+*.egg-info/
+dist/
+*.egg
+.pytest_cache/
+.coverage
+htmlcov/
+
+# IDEs and Editors
+.vscode/
+.idea/
+.specstory/
+*.swp
+*.swo
+*~
+.DS_Store
+*.code-workspace
+
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# Linux
+*~
+.directory
+
+# MacOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Logs and databases
+*.log
+*.sql
+*.sqlite
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Compressed files (optional - uncomment if needed)
+# *.zip
+# *.tar.gz
+# *.rar
+

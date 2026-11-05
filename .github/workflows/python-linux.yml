@@ -1,0 +1,24 @@
+name: Python Linux build and tests
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libeigen3-dev
+          python -m pip install --upgrade pip
+          python -m pip install numpy scipy
+      - name: Build native libraries
+        run: EIGEN_PATH=/usr/include/eigen3 bash source/python/compile_linux.sh
+      - name: Run interface tests
+        run: python -m unittest discover -s tests -v
